@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="#Home">Home</a>
+    <a href="#About">About</a>
+    <a href="#Skill">Skills</a>
+    <a href="#Contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="Home">
+    <h1>My Personal Profile Page</h1>
+</section>
+
+<!-- ABOUT -->
+<section id="About">
+    <div class="container about-flex">
+
+<!-- ABOUT -->
+<section id="About" class="container">
+    <img src="carleng.jpeg" id="profilePic" alt="My Photo">
+        </a>
+
+        <div class="text">
+            <h2>About Me</h2>
+            <h3>Carl Ohwen Martin F. Pascual</h3>
+
+            <p>
+                I am a hardworking working student balancing school and a call center job 
+                to support my education. This experience has strengthened my discipline, 
+                responsibility, and perseverance.
+            </p>
+
+            <ul>
+                <li>Drawing and creativity</li>
+                <li>Cycling</li>
+                <li>Exploring new ideas</li>
+                <li>Playing guitar</li>
+                <li>Watching movies</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS (TABLE FIXED) -->
+<section id="Skill">
+    <div class="container">
+        <h2>Skills</h2>
+
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>Cycling</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>Sketching</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>Music (Guitar)</td>
+                <td>Intermediate</td>
+            </tr>
+        </table>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="Contact">
+<div class="container">
+<h2>Contact Me</h2>
+
+<form action="result.html" method="GET" id="contactForm">
+
+<label>Name</label>
+<input type="text" id="name" placeholder="Your full name">
+
+<label>Email</label>
+<input type="email" id="email" placeholder="your.email@example.com">
+
+<label>Subject</label>
+<input type="text" id="subject" placeholder="Subject">
+
+<label>Message</label>
+<textarea id="message" rows="5"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 This form is Confidential.</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+<!-- SCRIPT -->
+<script>
+let img = document.getElementById("profilePic");
+
+img.addEventListener("click", function() {
+  img.classList.toggle("zoomed");
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  localStorage.setItem("name", document.getElementById("name").value);
+  localStorage.setItem("email", document.getElementById("email").value);
+  localStorage.setItem("subject", document.getElementById("subject").value);
+  localStorage.setItem("message", document.getElementById("message").value);
+
+  window.location.href = "result.html";
+});
+</script>
+</body>
+</html>
+
